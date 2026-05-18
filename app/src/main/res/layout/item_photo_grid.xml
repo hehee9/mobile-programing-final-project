@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/grid_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E9EFE7"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_photo_placeholder" />
+
+        <ProgressBar
+            android:id="@+id/grid_photo_progress"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/grid_gps_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_badge_missing"
+            android:paddingHorizontal="9dp"
+            android:paddingVertical="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/remove_photo_button"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_round_dark"
+            android:gravity="center"
+            android:contentDescription="@string/remove_photo"
+            android:text="@string/remove_photo_icon"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</com.google.android.material.card.MaterialCardView>
+
+
