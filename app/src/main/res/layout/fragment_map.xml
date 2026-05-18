@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/map_progress"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/map_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/notice_background"
+        android:lineSpacingExtra="3dp"
+        android:padding="14dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</FrameLayout>
+
+
