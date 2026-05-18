@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.TravelRecords" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/bottom_nav_background</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

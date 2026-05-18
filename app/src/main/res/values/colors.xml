@@ -1,0 +1,12 @@
+<resources>
+    <color name="primary">#2E7D32</color>
+    <color name="primary_dark">#1B5E20</color>
+    <color name="accent">#FF8F00</color>
+    <color name="background">#F6F8F5</color>
+    <color name="text_primary">#1F2A1F</color>
+    <color name="text_secondary">#607060</color>
+    <color name="bottom_nav_background">#FFFFFF</color>
+    <color name="bottom_nav_selected">#2E7D32</color>
+    <color name="bottom_nav_unselected">#6A776A</color>
+    <color name="notice_background">#DDE9F5DD</color>
+</resources>

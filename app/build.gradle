@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+import java.util.Properties
+
+Properties localProperties = new Properties()
+File localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream { stream -> localProperties.load(stream) }
+}
+String mapsApiKey = localProperties.getProperty('MAPS_API_KEY', '')
+String escapedMapsApiKey = mapsApiKey.replace('\\', '\\\\').replace('"', '\\"')
+
+android {
+    namespace 'com.sch.mobile.travelrecord'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.sch.mobile.travelrecord'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+        manifestPlaceholders = [MAPS_API_KEY: mapsApiKey]
+        buildConfigField 'String', 'MAPS_API_KEY', '"' + escapedMapsApiKey + '"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lint {
+        disable 'GradleDependency'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'androidx.activity:activity:1.8.0'
+    implementation 'com.google.android.material:material:1.14.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'androidx.viewpager2:viewpager2:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.exifinterface:exifinterface:1.4.2'
+    implementation 'com.google.android.gms:play-services-maps:20.0.0'
+    implementation 'com.google.android.gms:play-services-base:18.10.0'
+}
+
+
