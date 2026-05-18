@@ -1,10 +1,28 @@
+# Gradle / Android build outputs
 .gradle/
+.kotlin/
 build/
 app/build/
+**/build/
+
+# Local machine / IDE files
 local.properties
 *.iml
 .idea/
 .DS_Store
+
+# Packaged app artifacts
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Android generated native/build folders
+.cxx/
+.externalNativeBuild/
+captures/
+
+# Local requirement/reference files
 2026 기말프로젝트-여행기록앱.md
 2026 기말프로젝트-여행기록앱.pdf
 docs/
